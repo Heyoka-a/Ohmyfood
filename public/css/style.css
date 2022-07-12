@@ -113,6 +113,10 @@ h2 {
   gap: 12px;
 }
 
+.restaurant-title {
+  width: 90%;
+}
+
 .card-on-index {
   text-decoration: none;
   color: black;
