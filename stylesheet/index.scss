@@ -1,4 +1,152 @@
-h1{
-  color: red;
-  font-size: x-large;
+// font-family: 'Shrikhand', cursive;
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  width: 100%;
+  height: 50px;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+} .nav-img{
+  width: 160px;
+}
+
+.localisation{
+  height: 50px;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+header{
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 32px 0;
+} h1{
+  margin: 0;
+  font-family: 'Shrikhand', cursive;
+  font-size: 26px;
+} .p-in-header{
+  font-family: 'Roboto';
+  margin: 32px 0;
+} .discover-btn{
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 30px;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
+}
+
+.discover-btn:hover{
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+#fonctionnement{
+  width: 95%;
+  height: 250px;
+  margin: 30px auto;
+} h2{
+  font-family: 'Shrikhand';
+} .contain-choices-btn{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+} .word-spacing{
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+} .choice-btn{
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: black;
+  width: 90%;
+  text-align: center;
+  background-color: #F6F6F6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 18px 18px;
+  border-radius: 18px;
+}
+
+.choice-btn:hover{
+  background-color: #9256dc69;
+  transition: 0.4s;
+}
+
+#restaurants{
+  width: 95%;
+  margin: auto;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+} .card-on-index{
+  text-decoration: none;
+  color: black;
+  width: 90%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} .card-img{
+  width: 100%;
+  height: 160px;
+  border-radius: 18px 18px 0 0;
+  object-fit: cover;
+} .infos-in-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 8px 0;
+} p{
+  margin: 0;
+}
+
+.hearth > i:hover{
+  color: pink;
+}
+
+
+footer{
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  margin: 40px 0 0 0;
+} .footer-img{
+  width: 80px;
+  background-color: white;
+  margin: 18px 14px;
+} .contain-footer-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 120px;
+  width: 90%;
+  margin: auto;
+} .footer-link{
+  text-decoration: none;
+  color: white;
+} .footer-link > i {
+  margin: 0 12px 0 0;
 }
