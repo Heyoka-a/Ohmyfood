@@ -215,7 +215,7 @@ footer{
 } .menu-link-anim{
   text-decoration: none;
   color: black;
-  animation: fadein 2s;
+  animation: fadein 2s ease-in-out;
 } .plats{
   font-family: 'Roboto';
   background-color: #FFFFFF;
@@ -248,26 +248,21 @@ footer{
   transition: 0.4s;
 }
 
-
-// @keyframes fadein {
-//   from {
-//     opacity: 0;
-//   }
-
-//   to {
-//     opacity: 1;
-//   }
-// }
-
 @keyframes fadein {
   0%{
     opacity: 0;
-  }
-  50%{
-    opacity: 0.5;
-    transform: translateY(-8px);
+    transform: translateY(8px);
   }
   100%{
     opacity: 1;
+    transform: translateY(0);
   }
+}
+// la palette du gout page
+
+.no-whitespace{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
 }
