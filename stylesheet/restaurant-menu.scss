@@ -1,0 +1,132 @@
+.before-page {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.banniere {
+  height: 300px;
+  width: 100%;
+}
+
+.banniere-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.contain-menus {
+  background-color: #F6F6F6;
+  margin-top: -50px;
+  border-radius: 32px 32px 0 0;
+}
+
+.title-menu-france {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 8px;
+}
+
+.container-the-menus {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.little-container {
+  width: 90%;
+  background-color: transparent;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .title-of-menu {
+    font-family: 'Shrikhand';
+    border-bottom: 2px solid $tertiary;
+    width: 10%;
+  }
+
+  .menu-link-anim {
+    text-decoration: none;
+    color: black;
+    transition-property: opacity;
+    transition: all 400ms;
+    animation: fadein 2s ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .plats {
+    font-family: 'Roboto';
+    background-color: #FFFFFF;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .supp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu-link-anim:hover .checkbox {
+  display: block;
+  transition: 0.4s;
+}
+
+.checkbox {
+  display: none;
+}
+
+
+.contain-order-btn {
+  text-align: center;
+  margin: 50px auto 70px auto;
+
+  .order-btn {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition-property: opacity;
+    transition: all 400ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.no-whitespace {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

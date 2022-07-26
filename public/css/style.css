@@ -1,22 +1,65 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.contain-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background: linear-gradient(0deg, rgb(147, 86, 220) 24%, rgb(255, 121, 218) 100%);
 }
 
-nav {
-  width: 100%;
+.welcome-omf {
+  text-align: center;
+  font-family: "Shrikhand";
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.load-spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 24px solid rgb(147, 86, 220);
+  border-right: 24px solid rgb(255, 121, 218);
+  border-bottom: 24px solid rgb(147, 86, 220);
+  border-left: 24px solid rgb(255, 121, 218);
+  animation: spin 1.2s infinite;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.logo-spinner-page {
+  width: 60%;
+  text-align: center;
+}
+
+.loading-page-img {
+  background-color: black;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header {
+  background-color: #F6F6F6;
+  text-align: center;
+}
+header nav {
   height: 50px;
   padding: 12px 0;
   display: flex;
   justify-content: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-nav .nav-img {
+header nav .nav-img {
   width: 160px;
 }
-
-.localisation {
+header .localisation {
   height: 50px;
   background-color: #EAEAEA;
   display: flex;
@@ -25,12 +68,6 @@ nav .nav-img {
   gap: 8px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-}
-
-header {
-  background-color: #F6F6F6;
-  text-align: center;
-  padding: 32px 0;
 }
 header h1 {
   margin: 0;
@@ -54,62 +91,6 @@ header .discover-btn {
 }
 header .discover-btn:hover {
   opacity: 0.8;
-}
-
-#fonctionnement {
-  width: 85%;
-  height: 250px;
-  margin: 34px auto 70px auto;
-}
-#fonctionnement h2 {
-  font-family: "Shrikhand";
-}
-#fonctionnement .contain-choices-btn {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-}
-#fonctionnement .word-spacing {
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
-}
-#fonctionnement span {
-  padding: 4px 8px;
-  margin-left: -28px;
-  color: white;
-  font-family: "Roboto";
-  font-size: 12px;
-  background-color: #9356DC;
-  border-radius: 50%;
-}
-#fonctionnement .choice-btn {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-family: "Roboto";
-  font-weight: bold;
-  color: black;
-  width: 90%;
-  text-align: center;
-  background-color: #F6F6F6;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 18px 18px;
-  border-radius: 18px;
-  transition-property: opacity;
-  transition: all 400ms;
-}
-#fonctionnement .choice-btn:hover {
-  background-color: #F5EDFF;
-}
-#fonctionnement .color-i {
-  color: #7E7E7E;
-}
-#fonctionnement .choice-btn:hover i {
-  color: #9356DC;
 }
 
 #restaurants {
@@ -319,52 +300,98 @@ footer .footer-link > i {
     transform: translateY(0);
   }
 }
-.contain-spinner {
+.contact-title {
+  display: flex;
+  justify-content: center;
+  font-family: "Shrikhand", cursive;
+}
+
+.contact-us {
+  width: 90%;
+  height: calc(100vh - 417px);
+  margin: 24px auto 0 auto;
+}
+.contact-us .contain-social-networks {
+  height: 200px;
+  background-color: #F7F7F7;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
-  background: linear-gradient(0deg, rgb(147, 86, 220) 24%, rgb(255, 121, 218) 100%);
+}
+.contact-us .network {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto";
+  font-size: 18px;
+}
+.contact-us .icon-network {
+  font-size: 28px;
+  color: #9356DC;
+  margin: 0 8px;
 }
 
-.welcome-omf {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#fonctionnement {
+  width: 85%;
+  height: 250px;
+  margin: 34px auto 70px auto;
+}
+#fonctionnement h2 {
   font-family: "Shrikhand";
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
-
-.load-spinner {
-  width: 100px;
-  height: 100px;
+#fonctionnement .contain-choices-btn {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+#fonctionnement .word-spacing {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#fonctionnement span {
+  padding: 4px 8px;
+  margin-left: -28px;
+  color: white;
+  font-family: "Roboto";
+  font-size: 12px;
+  background-color: #9356DC;
   border-radius: 50%;
-  border-top: 24px solid rgb(147, 86, 220);
-  border-right: 24px solid rgb(255, 121, 218);
-  border-bottom: 24px solid rgb(147, 86, 220);
-  border-left: 24px solid rgb(255, 121, 218);
-  animation: spin 1.2s infinite;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
-.logo-spinner-page {
-  width: 60%;
+#fonctionnement .choice-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: black;
+  width: 90%;
   text-align: center;
+  background-color: #F6F6F6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  transition-property: opacity;
+  transition: all 400ms;
 }
-
-.loading-page-img {
-  background-color: black;
-  padding: 8px;
-  border-radius: 4px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+#fonctionnement .choice-btn:hover {
+  background-color: #F5EDFF;
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+#fonctionnement .color-i {
+  color: #7E7E7E;
+}
+#fonctionnement .choice-btn:hover i {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

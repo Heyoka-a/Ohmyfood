@@ -1,0 +1,63 @@
+#restaurants {
+  width: 95%;
+  margin: auto;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  .restaurant-title {
+    width: 90%;
+    margin: 28px 0 0 0;
+  }
+
+  .card-on-index {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    width: 90%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-property: opacity;
+    transition: all 400ms;
+  }
+
+  .card-on-index:hover {
+    box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
+  }
+
+  .new-green {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background-color: $tertiary;
+    color: #26977d;
+    padding: 6px 12px;
+    border-radius: 2px;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 18px 18px 0 0;
+    object-fit: cover;
+  }
+
+  .infos-in-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
