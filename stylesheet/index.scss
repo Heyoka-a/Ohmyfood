@@ -22,6 +22,7 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
@@ -36,7 +37,7 @@ header{
   font-size: 26px;
 } .p-in-header{
   font-family: 'Roboto';
-  margin: 32px 0;
+  margin: 18px 0 32px 0;
 } .discover-btn{
   text-decoration: none;
   color: white;
@@ -53,9 +54,9 @@ header{
 }
 
 #fonctionnement{
-  width: 95%;
+  width: 85%;
   height: 250px;
-  margin: 30px auto;
+  margin: 34px auto 70px auto;
 } h2{
   font-family: 'Shrikhand';
 } .contain-choices-btn{
@@ -70,6 +71,8 @@ header{
   display: flex;
   justify-content: space-evenly;
 } .choice-btn{
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-family: 'Roboto';
   font-weight: bold;
@@ -82,9 +85,27 @@ header{
   border-radius: 18px;
 }
 
+.color-i{
+  color: #7E7E7E;
+}
+
 .choice-btn:hover{
-  background-color: #9256dc69;
+  background-color: #F5EDFF;
   transition: 0.4s;
+}
+
+.choice-btn:hover i {
+  color: #9356DC;
+}
+
+span{
+  padding: 4px 8px;
+  margin-left: -28px;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 12px;
+  background-color: #9356DC;
+  border-radius: 50%;
 }
 
 #restaurants{
@@ -95,10 +116,12 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 } .restaurant-title{
   width: 90%;
+  margin: 28px 0 0 0;
 } .card-on-index{
+  position: relative;
   text-decoration: none;
   color: black;
   width: 90%;
@@ -108,6 +131,16 @@ header{
   align-items: center;
   border-radius: 18px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} .card-on-index:hover{
+  box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
+} .new-green{
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background-color: #99E2D0;
+  color: #26977d;
+  padding: 6px 12px;
+  border-radius: 2px;
 } .card-img{
   width: 100%;
   height: 160px;
@@ -122,16 +155,6 @@ header{
 } p{
   margin: 0;
 }
-
-.hearth{
-  font-size: 20px;
-  color: rgb(207, 206, 206);
-}
-.hearth:hover{
-  color: #9356DC;
-  transition: 0.4s;
-}
-
 
 
 footer{
@@ -228,6 +251,17 @@ footer{
   align-items: center;
 }
 
+.menu-link-anim:hover{
+  opacity: 0.9;
+}
+.menu-link-anim:hover .checkbox{
+  display: block;
+  transition: 0.4s;
+}
+
+.checkbox{
+  display: none;
+}
 
 .contain-order-btn{
   text-align: center;
