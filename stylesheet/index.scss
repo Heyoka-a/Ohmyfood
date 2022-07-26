@@ -12,8 +12,10 @@ nav{
   display: flex;
   justify-content: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-} .nav-img{
-  width: 160px;
+
+    .nav-img{
+        width: 160px;
+      }
 }
 
 .localisation{
@@ -31,14 +33,19 @@ header{
   background-color: #F6F6F6;
   text-align: center;
   padding: 32px 0;
-} h1{
+
+  h1{
   margin: 0;
   font-family: 'Shrikhand', cursive;
   font-size: 26px;
-} .p-in-header{
+  }
+
+  .p-in-header{
   font-family: 'Roboto';
   margin: 18px 0 32px 0;
-} .discover-btn{
+  }
+
+  .discover-btn{
   text-decoration: none;
   color: white;
   font-family: 'Roboto';
@@ -46,67 +53,81 @@ header{
   padding: 12px 18px;
   border-radius: 30px;
   background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
-}
+  transition-property: opacity;
+  transition: all 400ms;
 
-.discover-btn:hover{
-  opacity: 0.8;
-  transition: 0.4s;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
 }
+// end of header
 
 #fonctionnement{
   width: 85%;
   height: 250px;
   margin: 34px auto 70px auto;
-} h2{
-  font-family: 'Shrikhand';
-} .contain-choices-btn{
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-} .word-spacing{
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
-} .choice-btn{
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-family: 'Roboto';
-  font-weight: bold;
-  color: black;
-  width: 90%;
-  text-align: center;
-  background-color: #F6F6F6;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 18px 18px;
-  border-radius: 18px;
-}
 
-.color-i{
-  color: #7E7E7E;
-}
+  h2{
+    font-family: 'Shrikhand';
+  }
 
-.choice-btn:hover{
-  background-color: #F5EDFF;
-  transition: 0.4s;
-}
+  .contain-choices-btn{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
 
-.choice-btn:hover i {
-  color: #9356DC;
-}
+  .word-spacing{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-span{
-  padding: 4px 8px;
-  margin-left: -28px;
-  color: white;
-  font-family: 'Roboto';
-  font-size: 12px;
-  background-color: #9356DC;
-  border-radius: 50%;
+  span {
+    padding: 4px 8px;
+    margin-left: -28px;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 12px;
+    background-color: #9356DC;
+    border-radius: 50%;
+  }
+
+  .choice-btn{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: black;
+    width: 90%;
+    text-align: center;
+    background-color: #F6F6F6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 18px 18px;
+    border-radius: 18px;
+    transition-property: opacity;
+    transition: all 400ms;
+
+    &:hover {
+      background-color: #F5EDFF;
+    }
+  }
+
+  .color-i{
+    color: #7E7E7E;
+  }
+
+  .choice-btn:hover i {
+    color: #9356DC;
+  }
 }
+// end of 3 choices buttons
+
 
 #restaurants{
   width: 95%;
@@ -117,45 +138,60 @@ span{
   justify-content: center;
   align-items: center;
   gap: 16px;
-} .restaurant-title{
-  width: 90%;
-  margin: 28px 0 0 0;
-} .card-on-index{
-  position: relative;
-  text-decoration: none;
-  color: black;
-  width: 90%;
-  background-color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 18px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-} .card-on-index:hover{
-  box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
-} .new-green{
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  background-color: #99E2D0;
-  color: #26977d;
-  padding: 6px 12px;
-  border-radius: 2px;
-} .card-img{
-  width: 100%;
-  height: 160px;
-  border-radius: 18px 18px 0 0;
-  object-fit: cover;
-} .infos-in-card{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: 8px 0;
-} p{
-  margin: 0;
-}
 
+  .restaurant-title{
+    width: 90%;
+    margin: 28px 0 0 0;
+  }
+  .card-on-index{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    width: 90%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-property: opacity;
+    transition: all 400ms;
+  }
+
+  .card-on-index:hover{
+    box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
+  }
+
+  .new-green{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background-color: #99E2D0;
+    color: #26977d;
+    padding: 6px 12px;
+    border-radius: 2px;
+  }
+
+  .card-img{
+    width: 100%;
+    height: 160px;
+    border-radius: 18px 18px 0 0;
+    object-fit: cover;
+  }
+
+  .infos-in-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 8px 0;
+  }
+
+  p{
+    margin: 0;
+  }
+}
+// end of cards
 
 footer{
   background-color: #353535;
@@ -163,26 +199,35 @@ footer{
   flex-direction: column;
   height: 140px;
   margin: 40px 0 0 0;
-} .footer-img{
-  width: 80px;
-  margin: 18px 14px;
-} .contain-footer-links{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 120px;
-  width: 90%;
-  margin: auto;
-} .footer-link{
-  text-decoration: none;
-  font-family: 'Roboto';
-  color: white;
-} .footer-link > i {
-  margin: 0 12px 0 0;
+
+  .footer-img{
+    width: 80px;
+    margin: 18px 14px;
+  }
+
+  .contain-footer-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 120px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .footer-link{
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: white;
+  }
+
+  .footer-link > i {
+    margin: 0 12px 0 0;
+  }
 }
 
 
-// start of menu "a la française"
+// start of menu pages
+
 
 .before-page{
   position: absolute;
@@ -231,29 +276,37 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 14px;
-} .title-of-menu{
-  font-family: 'Shrikhand';
-  border-bottom: 2px solid #99E2D0;
-  width: 10%;
-} .menu-link-anim{
-  text-decoration: none;
-  color: black;
-  animation: fadein 2s ease-in-out;
-} .plats{
-  font-family: 'Roboto';
-  background-color: #FFFFFF;
-  padding: 12px;
-  border-radius: 12px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-} .supp{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  .title-of-menu{
+    font-family: 'Shrikhand';
+    border-bottom: 2px solid #99E2D0;
+    width: 10%;
+  }
+  .menu-link-anim{
+    text-decoration: none;
+    color: black;
+    transition-property: opacity;
+    transition: all 400ms;
+    animation: fadein 2s ease-in-out;
+
+    &:hover {
+        opacity: 0.9;
+      }
+  }
+  .plats{
+    font-family: 'Roboto';
+    background-color: #FFFFFF;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .supp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-.menu-link-anim:hover{
-  opacity: 0.9;
-}
 .menu-link-anim:hover .checkbox{
   display: block;
   transition: 0.4s;
@@ -263,24 +316,36 @@ footer{
   display: none;
 }
 
+
 .contain-order-btn{
   text-align: center;
   margin: 50px auto 70px auto;
-} .order-btn{
-  text-decoration: none;
-  color: white;
-  font-family: 'Roboto';
-  font-weight: bold;
-  padding: 14px 32px;
-  border-radius: 30px;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  .order-btn{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition-property: opacity;
+    transition: all 400ms;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
 }
 
-.order-btn:hover{
-  opacity: 0.8;
-  transition: 0.4s;
+.no-whitespace {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
 }
+
 
 @keyframes fadein {
   0%{
@@ -294,9 +359,51 @@ footer{
 }
 // la palette du gout page
 
-.no-whitespace{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 15px;
+
+.contain-spinner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
+}
+
+.welcome-omf{
+  text-align: center;
+  font-family: 'Shrikhand';
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.load-spinner{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 24px solid rgba(147, 86, 220, 1);
+  border-right: 24px solid rgba(255, 121, 218, 1);
+  border-bottom: 24px solid rgba(147, 86, 220, 1);
+  border-left: 24px solid rgba(255, 121, 218, 1);
+  animation: spin 1.2s infinite;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.logo-spinner-page{
+  width: 60%;
+  text-align: center;
+}
+
+.loading-page-img{
+  background-color: black;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }

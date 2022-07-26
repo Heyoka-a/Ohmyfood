@@ -12,8 +12,7 @@ nav {
   justify-content: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
-.nav-img {
+nav .nav-img {
   width: 160px;
 }
 
@@ -33,19 +32,16 @@ header {
   text-align: center;
   padding: 32px 0;
 }
-
-h1 {
+header h1 {
   margin: 0;
   font-family: "Shrikhand", cursive;
   font-size: 26px;
 }
-
-.p-in-header {
+header .p-in-header {
   font-family: "Roboto";
   margin: 18px 0 32px 0;
 }
-
-.discover-btn {
+header .discover-btn {
   text-decoration: none;
   color: white;
   font-family: "Roboto";
@@ -53,11 +49,11 @@ h1 {
   padding: 12px 18px;
   border-radius: 30px;
   background: linear-gradient(0deg, rgb(147, 86, 220) 24%, rgb(255, 121, 218) 100%);
+  transition-property: opacity;
+  transition: all 400ms;
 }
-
-.discover-btn:hover {
+header .discover-btn:hover {
   opacity: 0.8;
-  transition: 0.4s;
 }
 
 #fonctionnement {
@@ -65,12 +61,10 @@ h1 {
   height: 250px;
   margin: 34px auto 70px auto;
 }
-
-h2 {
+#fonctionnement h2 {
   font-family: "Shrikhand";
 }
-
-.contain-choices-btn {
+#fonctionnement .contain-choices-btn {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -78,14 +72,21 @@ h2 {
   align-items: center;
   gap: 18px;
 }
-
-.word-spacing {
+#fonctionnement .word-spacing {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
 }
-
-.choice-btn {
+#fonctionnement span {
+  padding: 4px 8px;
+  margin-left: -28px;
+  color: white;
+  font-family: "Roboto";
+  font-size: 12px;
+  background-color: #9356DC;
+  border-radius: 50%;
+}
+#fonctionnement .choice-btn {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -98,29 +99,17 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 18px 18px;
   border-radius: 18px;
+  transition-property: opacity;
+  transition: all 400ms;
 }
-
-.color-i {
+#fonctionnement .choice-btn:hover {
+  background-color: #F5EDFF;
+}
+#fonctionnement .color-i {
   color: #7E7E7E;
 }
-
-.choice-btn:hover {
-  background-color: #F5EDFF;
-  transition: 0.4s;
-}
-
-.choice-btn:hover i {
+#fonctionnement .choice-btn:hover i {
   color: #9356DC;
-}
-
-span {
-  padding: 4px 8px;
-  margin-left: -28px;
-  color: white;
-  font-family: "Roboto";
-  font-size: 12px;
-  background-color: #9356DC;
-  border-radius: 50%;
 }
 
 #restaurants {
@@ -133,13 +122,11 @@ span {
   align-items: center;
   gap: 16px;
 }
-
-.restaurant-title {
+#restaurants .restaurant-title {
   width: 90%;
   margin: 28px 0 0 0;
 }
-
-.card-on-index {
+#restaurants .card-on-index {
   position: relative;
   text-decoration: none;
   color: black;
@@ -150,13 +137,13 @@ span {
   align-items: center;
   border-radius: 18px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition-property: opacity;
+  transition: all 400ms;
 }
-
-.card-on-index:hover {
+#restaurants .card-on-index:hover {
   box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
 }
-
-.new-green {
+#restaurants .new-green {
   position: absolute;
   right: 12px;
   top: 12px;
@@ -165,23 +152,20 @@ span {
   padding: 6px 12px;
   border-radius: 2px;
 }
-
-.card-img {
+#restaurants .card-img {
   width: 100%;
   height: 160px;
   border-radius: 18px 18px 0 0;
   object-fit: cover;
 }
-
-.infos-in-card {
+#restaurants .infos-in-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   margin: 8px 0;
 }
-
-p {
+#restaurants p {
   margin: 0;
 }
 
@@ -192,13 +176,11 @@ footer {
   height: 140px;
   margin: 40px 0 0 0;
 }
-
-.footer-img {
+footer .footer-img {
   width: 80px;
   margin: 18px 14px;
 }
-
-.contain-footer-links {
+footer .contain-footer-links {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -206,14 +188,12 @@ footer {
   width: 90%;
   margin: auto;
 }
-
-.footer-link {
+footer .footer-link {
   text-decoration: none;
   font-family: "Roboto";
   color: white;
 }
-
-.footer-link > i {
+footer .footer-link > i {
   margin: 0 12px 0 0;
 }
 
@@ -265,35 +245,32 @@ footer {
   flex-direction: column;
   gap: 14px;
 }
-
-.title-of-menu {
+.little-container .title-of-menu {
   font-family: "Shrikhand";
   border-bottom: 2px solid #99E2D0;
   width: 10%;
 }
-
-.menu-link-anim {
+.little-container .menu-link-anim {
   text-decoration: none;
   color: black;
+  transition-property: opacity;
+  transition: all 400ms;
   animation: fadein 2s ease-in-out;
 }
-
-.plats {
+.little-container .menu-link-anim:hover {
+  opacity: 0.9;
+}
+.little-container .plats {
   font-family: "Roboto";
   background-color: #FFFFFF;
   padding: 12px;
   border-radius: 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
-.supp {
+.little-container .supp {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.menu-link-anim:hover {
-  opacity: 0.9;
 }
 
 .menu-link-anim:hover .checkbox {
@@ -309,8 +286,7 @@ footer {
   text-align: center;
   margin: 50px auto 70px auto;
 }
-
-.order-btn {
+.contain-order-btn .order-btn {
   text-decoration: none;
   color: white;
   font-family: "Roboto";
@@ -319,11 +295,18 @@ footer {
   border-radius: 30px;
   background: linear-gradient(0deg, rgb(147, 86, 220) 24%, rgb(255, 121, 218) 100%);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition-property: opacity;
+  transition: all 400ms;
+}
+.contain-order-btn .order-btn:hover {
+  opacity: 0.8;
 }
 
-.order-btn:hover {
-  opacity: 0.8;
-  transition: 0.4s;
+.no-whitespace {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
 }
 
 @keyframes fadein {
@@ -336,11 +319,52 @@ footer {
     transform: translateY(0);
   }
 }
-.no-whitespace {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 15px;
+.contain-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background: linear-gradient(0deg, rgb(147, 86, 220) 24%, rgb(255, 121, 218) 100%);
+}
+
+.welcome-omf {
+  text-align: center;
+  font-family: "Shrikhand";
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.load-spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 24px solid rgb(147, 86, 220);
+  border-right: 24px solid rgb(255, 121, 218);
+  border-bottom: 24px solid rgb(147, 86, 220);
+  border-left: 24px solid rgb(255, 121, 218);
+  animation: spin 1.2s infinite;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.logo-spinner-page {
+  width: 60%;
+  text-align: center;
+}
+
+.loading-page-img {
+  background-color: black;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
