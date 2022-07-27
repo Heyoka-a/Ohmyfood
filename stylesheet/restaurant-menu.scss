@@ -3,6 +3,7 @@
   left: 3%;
   top: 3%;
   font-size: 18px;
+  color: black;
   cursor: pointer;
 }
 
@@ -79,12 +80,12 @@
   }
 }
 
-.menu-link-anim:hover .checkbox {
+.menu-link-anim:hover .rotation {
   display: block;
   transition: 0.4s;
 }
 
-.checkbox {
+.rotation {
   display: none;
 }
 
