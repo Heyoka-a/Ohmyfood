@@ -56,9 +56,9 @@
   .menu-link-anim {
     text-decoration: none;
     color: black;
-    transition-property: opacity;
-    transition: all 400ms;
-    animation: fadein 2s ease-in-out;
+    // transition-property: opacity;
+    // transition: all 400ms;
+    // animation: fadein 2s ease-in-out;
 
     &:hover {
       opacity: 0.9;
@@ -66,11 +66,18 @@
   }
 
   .plats {
+    display: flex;
+    justify-content: space-between;
     font-family: 'Roboto';
     background-color: #FFFFFF;
-    padding: 12px;
+    // padding: 12px;
     border-radius: 12px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .contain-plat-infos{
+    padding: 12px 0 12px 12px;
+    display: flex;
+    flex-direction: column;
   }
 
   .supp {
@@ -85,9 +92,11 @@
   transition: 0.4s;
 }
 
-.rotation {
-  display: none;
-}
+// .rotation {
+//   display: none;
+//   width: 50px;
+//   background-color: green;
+// }
 
 
 .contain-order-btn {
@@ -131,3 +140,178 @@
     transform: translateY(0);
   }
 }
+
+
+.menu-link-anim-test{
+  border-radius: 10px;
+  // box-shadow: 1px 1px 10px 1px #e2e2e2;
+  background-color: #FFFFFF;
+  // overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  // color: black;
+  transition-property: opacity;
+  transition: all 400ms;
+  animation: fadein 2s ease-in-out;
+  cursor: pointer;
+
+  .plats-test{
+    // width: 100%;
+    overflow: hidden;
+    // min-height: 35px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    padding: 8px;
+
+      & b{
+        font-family: 'Roboto';
+      }
+
+      & p {
+        font-family: "Roboto", sans-serif;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0;
+      }
+    }
+
+  .change-width{
+    width: 90%;
+  }
+
+  .change-width-2{
+    margin: 0 4px 8px 0;
+  }
+
+  .align-price{
+    display: flex;
+    align-items: flex-end;
+    margin: 8px 4px;
+    font-family: 'Roboto';
+  }
+
+  .checkbox{
+    width: 0px;
+    transition-duration: 1s;
+    font-size: 1.5em;
+
+      & i{
+        display: none;
+        color: white;
+      }
+  }
+}
+
+
+.menu-link-anim-test:hover .checkbox {
+  width: 60px;
+  height: 54px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 20% 20% 0;
+
+  // @media (max-width: 1000px) {
+  //   width: 65px;
+  // }
+
+  .rotation-test {
+    display: flex;
+    place-items: center;
+  }
+
+  .rond {
+  display: flex;
+  place-items: center;
+  // transform-origin: center;
+  animation: spin;
+  animation-duration: 1s;
+  }
+}
+
+
+// .test-plats{
+//   background-color: whitesmoke;
+//     border-radius: 10px;
+//     box-shadow: 1px 1px 10px 1px #e2e2e2;
+//     margin: 10px;
+//     overflow: hidden;
+//     display: flex;
+//     justify-content: space-between;
+//     cursor: pointer;
+// }
+
+// .spacediv{
+//   width: 100%;
+//     overflow: hidden;
+//     min-height: 35px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     padding: 8px;
+// }
+
+// .spacediv > p{
+//     font-family: "Roboto", sans-serif;
+//       text-overflow: ellipsis;
+//       overflow: hidden;
+//       white-space: nowrap;
+//     }
+
+// .align-price{
+//     display: flex;
+//       align-items: flex-end;
+//       margin-bottom: 8px;
+//       margin-right: 8px;
+//     }
+
+// .check{
+//   width: 0px;
+//     transition-duration: 1s;
+//     font-size: 1.5em;
+//     i{
+//       display: none;
+//         place-items: center;
+//         color: white;
+//     }
+// }
+
+// .rotation{
+//     margin: 0;
+//       padding: 0;
+//       text-decoration: none;
+//       list-style-type: none;
+//     }
+
+//         .test-plats:hover .check {
+//           width: 90px;
+//           height: 51px;
+//           background-color: black;
+//           display: flex;
+//           justify-content: center;
+//           border-radius: 0 20% 20% 0;
+
+//           @media (max-width: 1000px) {
+//             width: 65px;
+//           }
+
+//           & .rotation {
+//             display: flex;
+//             place-items: center;
+//           }
+
+//           & .rond {
+//             display: flex;
+//             place-items: center;
+//             transform-origin: center;
+//             animation: spin;
+//             animation-duration: 1s;
+//           }
+
+//           @media (min-width: 1000px) {
+//             height: 90px;
+//             border-radius: 0 10% 10% 0;
+//           }
+//         }

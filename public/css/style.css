@@ -235,19 +235,22 @@ footer .footer-link > i {
 .little-container .menu-link-anim {
   text-decoration: none;
   color: black;
-  transition-property: opacity;
-  transition: all 400ms;
-  animation: fadein 2s ease-in-out;
 }
 .little-container .menu-link-anim:hover {
   opacity: 0.9;
 }
 .little-container .plats {
+  display: flex;
+  justify-content: space-between;
   font-family: "Roboto";
   background-color: #FFFFFF;
-  padding: 12px;
   border-radius: 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.little-container .contain-plat-infos {
+  padding: 12px 0 12px 12px;
+  display: flex;
+  flex-direction: column;
 }
 .little-container .supp {
   display: flex;
@@ -258,10 +261,6 @@ footer .footer-link > i {
 .menu-link-anim:hover .rotation {
   display: block;
   transition: 0.4s;
-}
-
-.rotation {
-  display: none;
 }
 
 .contain-order-btn {
@@ -301,6 +300,71 @@ footer .footer-link > i {
     transform: translateY(0);
   }
 }
+.menu-link-anim-test {
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  transition-property: opacity;
+  transition: all 400ms;
+  animation: fadein 2s ease-in-out;
+  cursor: pointer;
+}
+.menu-link-anim-test .plats-test {
+  overflow: hidden;
+  padding: 8px;
+}
+.menu-link-anim-test .plats-test b {
+  font-family: "Roboto";
+}
+.menu-link-anim-test .plats-test p {
+  font-family: "Roboto", sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+}
+.menu-link-anim-test .change-width {
+  width: 90%;
+}
+.menu-link-anim-test .change-width-2 {
+  margin: 0 4px 8px 0;
+}
+.menu-link-anim-test .align-price {
+  display: flex;
+  align-items: flex-end;
+  margin: 8px 4px;
+  font-family: "Roboto";
+}
+.menu-link-anim-test .checkbox {
+  width: 0px;
+  transition-duration: 1s;
+  font-size: 1.5em;
+}
+.menu-link-anim-test .checkbox i {
+  display: none;
+  color: white;
+}
+
+.menu-link-anim-test:hover .checkbox {
+  width: 60px;
+  height: 54px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 20% 20% 0;
+}
+.menu-link-anim-test:hover .checkbox .rotation-test {
+  display: flex;
+  place-items: center;
+}
+.menu-link-anim-test:hover .checkbox .rond {
+  display: flex;
+  place-items: center;
+  animation: spin;
+  animation-duration: 1s;
+}
+
 .contact-title {
   display: flex;
   justify-content: center;
