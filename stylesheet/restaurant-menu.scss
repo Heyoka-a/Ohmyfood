@@ -144,7 +144,7 @@
   display: flex;
   justify-content: space-between;
   // color: black;
-  transition-property: opacity;
+  // transition-property: opacity;
   transition: all 400ms;
   animation: fadein 2s ease-in-out;
   cursor: pointer;
@@ -222,5 +222,39 @@
   // transform-origin: center;
   animation: spin;
   animation-duration: 1s;
+  }
+}
+
+.container-the-menus :nth-child(2){
+  transition: all 400ms;
+  animation: fadein2 3s ease-in-out;
+}
+
+.container-the-menus :nth-child(3) {
+  transition: all 400ms;
+  animation: fadein3 4s ease-in-out;
+}
+
+@keyframes fadein2{
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+
+@keyframes fadein3 {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
