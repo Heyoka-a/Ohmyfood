@@ -5,7 +5,7 @@
   }
 
 .contact-us{
-  width: 90%;
+  @include width90;
   height: calc(100vh - 417px);
   margin: 24px auto 0 auto;
 

@@ -8,28 +8,28 @@
   align-items: center;
   gap: 16px;
 
-  .restaurant-title {
-    width: 90%;
-    margin: 28px 0 0 0;
-  }
-
-  .card-on-index {
-    position: relative;
-    text-decoration: none;
-    color: black;
-    width: 90%;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 18px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition-property: opacity;
-    transition: all 400ms;
-
-    &:hover{
-      box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
+  & .restaurant-title {
+      @include width90;
+      margin: 28px 0 0 0;
     }
+
+  & .card-on-index {
+      position: relative;
+      text-decoration: none;
+      color: black;
+      @include width90;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 18px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      transition-property: opacity;
+      transition: all 400ms;
+
+        &:hover{
+          box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
+        }
 
     & .new-green {
         position: absolute;
@@ -50,15 +50,43 @@
   }
 
 
-  .infos-in-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 8px 0;
-  }
+.infos-in-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include width90;
+  margin: 8px 0;
+}
 
   & p {
       margin: 0;
     }
+}
+
+// .hearth{
+//   -webkit-background-clip: text;
+//   -moz-background-clip: text;
+//   cursor: pointer;
+
+//   & :hover{
+//     color: black;
+//   }
+// }
+
+.hearth {
+  color: black;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: .2em;
+}
+
+.hearth::before {
+  content: "\f004";
+  font-weight: bold;
+  transition: color 0.5s ease-out;
+}
+
+.hearth:hover::before {
+  color: red;
+  cursor: pointer;
 }

@@ -1,23 +1,39 @@
-.contain-spinner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
-  background: linear-gradient(0deg, rgb(147, 86, 220) 24%, rgb(255, 121, 218) 100%);
-  animation: spin 3s;
-  animation-fill-mode: both;
-  animation-timing-function: step-end;
-  display: none;
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
+@keyframes fadein2 {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadein3 {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .welcome-omf {
   text-align: center;
   font-family: "Shrikhand";
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
-
-.load-spinner {
+.welcome-omf .load-spinner {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -25,7 +41,6 @@
   border-right: 24px solid rgb(255, 121, 218);
   border-bottom: 24px solid rgb(147, 86, 220);
   border-left: 24px solid rgb(255, 121, 218);
-  animation: spin 1.2s infinite;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -43,9 +58,11 @@
 
 @keyframes spin {
   0% {
+    display: block;
     transform: rotate(0deg);
   }
   100% {
+    display: block;
     transform: rotate(360deg);
   }
 }
@@ -161,6 +178,24 @@ header .discover-btn:hover {
   margin: 0;
 }
 
+.hearth {
+  color: black;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+
+.hearth::before {
+  content: "\f004";
+  font-weight: bold;
+  transition: color 0.5s ease-out;
+}
+
+.hearth:hover::before {
+  color: red;
+  cursor: pointer;
+}
+
 footer {
   background-color: #353535;
   display: flex;
@@ -264,23 +299,12 @@ footer .footer-link > i {
   opacity: 0.8;
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .menu-link-anim-test {
   border-radius: 10px;
   background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   transition: all 400ms;
-  animation: fadein 2s ease-in-out;
   cursor: pointer;
 }
 .menu-link-anim-test .plats-test {
@@ -297,12 +321,6 @@ footer .footer-link > i {
   white-space: nowrap;
   margin: 0;
 }
-.menu-link-anim-test .change-width {
-  width: 90%;
-}
-.menu-link-anim-test .change-width-2 {
-  margin: 0 4px 8px 0;
-}
 .menu-link-anim-test .align-price {
   display: flex;
   align-items: flex-end;
@@ -317,6 +335,14 @@ footer .footer-link > i {
 .menu-link-anim-test .checkbox i {
   display: none;
   color: white;
+}
+
+.change-width {
+  width: 90%;
+}
+
+.change-width-2 {
+  margin: 0 4px 8px 0;
 }
 
 .menu-link-anim-test:hover .checkbox {
@@ -338,36 +364,21 @@ footer .footer-link > i {
   animation-duration: 1s;
 }
 
-.container-the-menus :nth-child(2) {
-  transition: all 400ms;
+.little-container:first-child {
+  transition: all 300ms;
+  animation: fadein 1s ease-in-out;
+}
+
+.little-container:nth-child(2) {
+  transition: all 300ms;
   animation: fadein2 3s ease-in-out;
 }
 
-.container-the-menus :nth-child(3) {
+.little-container:nth-child(3) {
   transition: all 400ms;
-  animation: fadein3 4s ease-in-out;
+  animation: fadein3 5s ease-in-out;
 }
 
-@keyframes fadein2 {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadein3 {
-  0% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .contact-title {
   display: flex;
   justify-content: center;
@@ -466,6 +477,34 @@ body {
 @media only screen and (min-width: 768px) {
   #fonctionnement {
     width: 50%;
+  }
+  #restaurants {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card-on-index {
+    width: 40% !important;
+  }
+  .container-the-menus {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .little-container:nth-child(3) {
+    margin-bottom: 18px;
+  }
+  .little-container {
+    width: 40%;
+  }
+  footer {
+    align-items: center;
+  }
+  .footer-img {
+    width: 130px !important;
+  }
+  .contain-footer-links {
+    flex-direction: row !important;
+    align-items: center;
   }
 }
 
