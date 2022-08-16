@@ -9,23 +9,28 @@ footer {
       width: 80px;
       margin: 18px 14px;
     }
+}
 
-  & .contain-footer-links {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 120px;
-      @include width90;
-      margin: auto;
-    }
+.contain-footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 120px;
+  @include width90;
+  margin: auto;
+}
 
-  & .footer-link {
-      text-decoration: none;
-      font-family: 'Roboto';
-      color: white;
-    }
+.footer-link {
+  text-decoration: none;
+  font-family: 'Roboto';
+  color: white;
+}
 
-  & .footer-link>i {
-      margin: 0 12px 0 0;
-    }
+// change margin <i> on footer
+.fa-utensils {
+  margin: 0 12px 0 0;
+}
+
+.fa-handshake-angle{
+  margin: 0 6px 0 0;
 }

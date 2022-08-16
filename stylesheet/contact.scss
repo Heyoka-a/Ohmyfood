@@ -1,7 +1,7 @@
   .contact-title {
     display: flex;
     justify-content: center;
-    font-family: 'Shrikhand', cursive;
+    font-family: $first-font;
   }
 
 .contact-us{
@@ -22,7 +22,7 @@
   & .network{
       text-decoration: none;
       color: black;
-      font-family: 'Roboto';
+      font-family: $second-font;
       font-size: 18px;
     }
 

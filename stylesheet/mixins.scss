@@ -2,6 +2,18 @@
   width: 90%;
 }
 
+// spin = check menu animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// the fadeins = fade in menu animation
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -38,6 +50,7 @@
   }
 }
 
+// loader + dual-ring = loading page animation
 @keyframes loader2 {
   0% {
     opacity: 100%;
@@ -59,7 +72,7 @@
   }
 }
 
-@keyframes dual-ring {
+@keyframes ring {
   0% {
     transform: rotate(0deg);
     opacity: 100%;

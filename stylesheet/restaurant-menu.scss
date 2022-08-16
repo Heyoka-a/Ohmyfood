@@ -10,15 +10,16 @@
 .banniere {
   height: 300px;
   width: 100%;
+
+  & .banniere-img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+    }
 }
 
-.banniere-img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-  z-index: -1;
-}
 
 .contain-menus {
   background-color: #F6F6F6;
@@ -47,63 +48,86 @@
   flex-direction: column;
   gap: 14px;
 
-  .title-of-menu {
-    font-family: 'Shrikhand';
-    border-bottom: 2px solid $tertiary;
-    width: 10%;
-  }
+  &  .title-of-menu {
+      font-family: 'Shrikhand';
+      border-bottom: 2px solid $tertiary;
+      width: 10%;
+    }
 }
 
 
 .contain-order-btn {
   text-align: center;
   margin: 50px auto 70px auto;
+}
 
-  .order-btn {
-    text-decoration: none;
-    color: white;
-    font-family: 'Roboto';
-    font-weight: bold;
-    padding: 14px 32px;
-    border-radius: 30px;
-    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition-property: opacity;
-    transition: all 400ms;
+.order-btn {
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding: 14px 32px;
+  border-radius: 30px;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition-property: opacity;
+  transition: all 400ms;
 
     &:hover {
       opacity: 0.8;
     }
-  }
 }
 
 
 
 
-.menu-link-anim-test{
+
+.menu-link-anim{
   border-radius: 10px;
   background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   transition: all 400ms;
   cursor: pointer;
+}
 
-  & .plats-test{
-      overflow: hidden;
-      padding: 8px;
+.menu-link-anim:hover .checkbox {
+  width: 60px;
+  height: 54px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 20% 20% 0;
 
-        & b{
-          font-family: 'Roboto';
-        }
+  & .rotation {
+    display: flex;
+    place-items: center;
+  }
 
-        & p {
-          font-family: "Roboto", sans-serif;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-          margin: 0;
-        }
+  & .rond {
+    display: flex;
+    place-items: center;
+    animation: spin;
+    animation-duration: 1s;
+  }
+}
+
+.plats{
+  overflow: hidden;
+  padding: 8px;
+
+    & b{
+      font-family: 'Roboto';
     }
+
+    & p {
+      font-family: "Roboto", sans-serif;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0;
+    }
+}
 
   .align-price{
     display: flex;
@@ -112,17 +136,17 @@
     font-family: 'Roboto';
   }
 
-  .checkbox{
-    width: 0px;
-    transition-duration: 1s;
-    font-size: 1.5em;
+.checkbox{
+  width: 0px;
+  transition-duration: 1s;
+  font-size: 1.5em;
 
-      & i{
-        display: none;
-        color: white;
-      }
-  }
+    & i{
+      display: none;
+      color: white;
+    }
 }
+
 
 // change width est pour certain éléments uniquement.
 .change-width {
@@ -131,37 +155,6 @@
 
 .change-width-2 {
   margin: 0 4px 8px 0;
-}
-
-
-.menu-link-anim-test:hover .checkbox {
-  width: 60px;
-  height: 54px;
-  background-color: green;
-  display: flex;
-  justify-content: center;
-  border-radius: 0 20% 20% 0;
-
-  .rotation-test {
-    display: flex;
-    place-items: center;
-  }
-
-  .rond {
-  display: flex;
-  place-items: center;
-  animation: spin;
-  animation-duration: 1s;
-  }
-}
-
-@keyframes spin {
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
 }
 
 .container-the-menus>div:first-child {
