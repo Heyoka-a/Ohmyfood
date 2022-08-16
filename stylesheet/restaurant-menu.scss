@@ -28,10 +28,15 @@
 }
 
 .title-menu-france {
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 8px;
+
+  & h1{
+    font-family: $first-font;
+  }
 }
 
 .container-the-menus {

@@ -66,18 +66,17 @@
 }
 
 .hearth {
+  font-size: 21px;
   cursor: pointer;
-  background-color: transparent;
-  border-radius: 50%;
   padding: .2em;
 }
 
 .hearth::before {
   transition-property: color;
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 
 .hearth:hover::before {
-  font-weight: bold;
   color: #9356DC;
+  font-weight: bold;
 }

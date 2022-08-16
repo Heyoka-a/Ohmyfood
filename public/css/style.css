@@ -294,20 +294,19 @@ span {
 }
 
 .hearth {
+  font-size: 21px;
   cursor: pointer;
-  background-color: transparent;
-  border-radius: 50%;
   padding: 0.2em;
 }
 
 .hearth::before {
   transition-property: color;
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 
 .hearth:hover::before {
-  font-weight: bold;
   color: #9356DC;
+  font-weight: bold;
 }
 
 footer {
@@ -373,10 +372,14 @@ footer .footer-img {
 }
 
 .title-menu-france {
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 8px;
+}
+.title-menu-france h1 {
+  font-family: "Shrikhand";
 }
 
 .container-the-menus {
