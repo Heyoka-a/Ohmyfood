@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -28,10 +29,50 @@
     transform: translateY(0);
   }
 }
+@keyframes loader2 {
+  0% {
+    opacity: 100%;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+  }
+  99% {
+    opacity: 0;
+    z-index: -1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1000;
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes dual-ring {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+}
 .welcome-omf {
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
   font-family: "Shrikhand";
+  animation: loader2 3s;
+  animation-fill-mode: both;
+  animation-timing-function: step-end;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+.welcome-omf h1 {
+  text-align: center;
 }
 .welcome-omf .load-spinner {
   width: 100px;
@@ -41,6 +82,9 @@
   border-right: 24px solid rgb(255, 121, 218);
   border-bottom: 24px solid rgb(147, 86, 220);
   border-left: 24px solid rgb(255, 121, 218);
+  animation: dual-ring 0.8s infinite;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -56,16 +100,6 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-@keyframes spin {
-  0% {
-    display: block;
-    transform: rotate(0deg);
-  }
-  100% {
-    display: block;
-    transform: rotate(360deg);
-  }
-}
 header {
   background-color: #F6F6F6;
   text-align: center;
@@ -80,29 +114,34 @@ header nav {
 header nav .nav-img {
   width: 160px;
 }
-header .localisation {
+
+.localisation {
   height: 50px;
   background-color: #EAEAEA;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   font-weight: bold;
 }
-header .title {
+
+.title {
   padding: 24px 0 12px 0;
 }
-header h1 {
+
+h1 {
   margin: 0;
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-size: 26px;
 }
-header .p-in-header {
+
+.p-in-header {
   font-family: "Roboto";
   margin: 18px 0 32px 0;
 }
-header .discover-btn {
+
+.discover-btn {
   text-decoration: none;
   color: white;
   font-family: "Roboto";
@@ -113,12 +152,74 @@ header .discover-btn {
   transition-property: opacity;
   transition: all 400ms;
 }
-header .discover-btn:hover {
+.discover-btn:hover {
   opacity: 0.8;
 }
 
 .add-padding {
   padding: 0 0 50px 0;
+}
+
+#fonctionnement {
+  width: 85%;
+  height: 250px;
+  margin: 34px auto 70px auto;
+}
+#fonctionnement h2 {
+  font-family: "Shrikhand";
+}
+
+.contain-choices-btn {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.word-spacing {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+span {
+  padding: 4px 8px;
+  margin-left: -28px;
+  color: white;
+  font-family: "Roboto";
+  font-size: 12px;
+  background-color: #9356DC;
+  border-radius: 50%;
+}
+
+.choice-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: black;
+  width: 90%;
+  text-align: center;
+  background-color: #F6F6F6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  transition-property: opacity;
+  transition: all 400ms;
+}
+.choice-btn:hover {
+  background-color: #F5EDFF;
+}
+
+.color-i {
+  color: #7E7E7E;
+}
+
+.choice-btn:hover i {
+  color: #9356DC;
 }
 
 #restaurants {
@@ -179,21 +280,20 @@ header .discover-btn:hover {
 }
 
 .hearth {
-  color: black;
+  cursor: pointer;
   background-color: transparent;
   border-radius: 50%;
   padding: 0.2em;
 }
 
 .hearth::before {
-  content: "\f004";
-  font-weight: bold;
-  transition: color 0.5s ease-out;
+  transition-property: color;
+  transition: all 0.4s;
 }
 
 .hearth:hover::before {
-  color: red;
-  cursor: pointer;
+  font-weight: bold;
+  color: #9356DC;
 }
 
 footer {
@@ -364,17 +464,25 @@ footer .footer-link > i {
   animation-duration: 1s;
 }
 
-.little-container:first-child {
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container-the-menus > div:first-child {
   transition: all 300ms;
   animation: fadein 1s ease-in-out;
 }
 
-.little-container:nth-child(2) {
+.container-the-menus > div:nth-child(2) {
   transition: all 300ms;
   animation: fadein2 3s ease-in-out;
 }
 
-.little-container:nth-child(3) {
+.container-the-menus > div:nth-child(3) {
   transition: all 400ms;
   animation: fadein3 5s ease-in-out;
 }
@@ -416,62 +524,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   max-width: 1440px;
-}
-
-#fonctionnement {
-  width: 85%;
-  height: 250px;
-  margin: 34px auto 70px auto;
-}
-#fonctionnement h2 {
-  font-family: "Shrikhand";
-}
-#fonctionnement .contain-choices-btn {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-}
-#fonctionnement .word-spacing {
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
-}
-#fonctionnement span {
-  padding: 4px 8px;
-  margin-left: -28px;
-  color: white;
-  font-family: "Roboto";
-  font-size: 12px;
-  background-color: #9356DC;
-  border-radius: 50%;
-}
-#fonctionnement .choice-btn {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-family: "Roboto";
-  font-weight: bold;
-  color: black;
-  width: 90%;
-  text-align: center;
-  background-color: #F6F6F6;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 18px 18px;
-  border-radius: 18px;
-  transition-property: opacity;
-  transition: all 400ms;
-}
-#fonctionnement .choice-btn:hover {
-  background-color: #F5EDFF;
-}
-#fonctionnement .color-i {
-  color: #7E7E7E;
-}
-#fonctionnement .choice-btn:hover i {
-  color: #9356DC;
 }
 
 @media only screen and (min-width: 768px) {

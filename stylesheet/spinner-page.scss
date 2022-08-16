@@ -1,22 +1,20 @@
-// .contain-spinner {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-evenly;
-//   height: 100vh;
-//   background: linear-gradient(0deg, rgba(147, 86, 220, 1) 24%, rgba(255, 121, 218, 1) 100%);
-//   display: none;
-//   animation: spin 1000ms;
-// }
-
 .welcome-omf {
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
   font-family: 'Shrikhand';
-  // animation: loader2 3s;
-  // animation-fill-mode: both;
-  // animation-timing-function: step-end;
+  animation: loader2 3s;
+  animation-fill-mode: both;
+  animation-timing-function: step-end;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 
+  & h1{
+    text-align: center;
+  }
 
   & .load-spinner {
       width: 100px;
@@ -26,60 +24,12 @@
       border-right: 24px solid rgba(255, 121, 218, 1);
       border-bottom: 24px solid rgba(147, 86, 220, 1);
       border-left: 24px solid rgba(255, 121, 218, 1);
-      // animation: dual-ring 0.8s infinite, loader 3s;
-      // animation-delay: 0.2s;
-      // animation-fill-mode: both;
+      animation: dual-ring 0.8s infinite;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 }
-
-// @keyframes loader2 {
-//   0% {
-//     opacity: 100%;
-//     z-index: 9999;
-//   }
-
-//   99% {
-//     opacity: 0;
-//     z-index: -1000;
-//   }
-
-//   100% {
-//     opacity: 0;
-//     z-index: -1000;
-//   }
-// }
-
-//  @keyframes dual-ring {
-//    0% {
-//      transform: rotate(0deg);
-//      opacity: 100%;
-//    }
-
-//    50% {
-//      transform: rotate(180deg);
-//      opacity: 10%;
-//    }
-
-//    100% {
-//      transform: rotate(360deg);
-//      opacity: 100%;
-//    }
-//  }
-
-//  @keyframes loader {
-//    0% {
-//      opacity: 100%;
-//    }
-
-//    99% {
-//      opacity: 100%;
-//    }
-
-//    100% {
-//      opacity: 100%;
-//    }
-//  }
 
 .logo-spinner-page {
   width: 60%;
@@ -91,16 +41,4 @@
   padding: 8px;
   border-radius: 4px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-@keyframes spin {
-  0% {
-    display: block;
-    transform: rotate(0deg);
-  }
-
-  100% {
-    display: block;
-    transform: rotate(360deg);
-  }
 }

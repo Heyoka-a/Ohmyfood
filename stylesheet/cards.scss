@@ -63,30 +63,19 @@
     }
 }
 
-// .hearth{
-//   -webkit-background-clip: text;
-//   -moz-background-clip: text;
-//   cursor: pointer;
-
-//   & :hover{
-//     color: black;
-//   }
-// }
-
 .hearth {
-  color: black;
+  cursor: pointer;
   background-color: transparent;
   border-radius: 50%;
   padding: .2em;
 }
 
 .hearth::before {
-  content: "\f004";
-  font-weight: bold;
-  transition: color 0.5s ease-out;
+  transition-property: color;
+  transition: all 0.4s;
 }
 
 .hearth:hover::before {
-  color: red;
-  cursor: pointer;
+  font-weight: bold;
+  color: #9356DC;
 }
