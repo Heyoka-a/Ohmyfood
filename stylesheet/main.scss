@@ -13,6 +13,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 // desktop responsive
@@ -24,11 +25,17 @@ body{
   }
   #fonctionnement{
     width: 50%;
+    text-align: center;
   }
   #restaurants{
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: center;
+  }
+  .title-menu-france{
+    justify-content: space-evenly;
+    width: 25%;
   }
   .restaurant-title{
     width: 85%;
@@ -38,7 +45,7 @@ body{
     display: none;
   }
   .card-on-index{
-    width: 40%!important;
+    width: 20%;
   }
   .container-the-menus{
     flex-direction: row;
@@ -59,5 +66,8 @@ body{
   .contain-footer-links{
     flex-direction: row!important;
     align-items: center;
+  }
+  .contact-us{
+    width: 60%;
   }
 }

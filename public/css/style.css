@@ -124,6 +124,10 @@ header nav .nav-img {
   width: 160px;
 }
 
+.link-logo {
+  display: flex;
+}
+
 .localisation {
   height: 50px;
   background-color: #EAEAEA;
@@ -244,6 +248,7 @@ span {
 .restaurant-title {
   width: 90%;
   margin: 28px 0 0 0;
+  font-family: "Shrikhand";
 }
 
 .card-on-index {
@@ -542,6 +547,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @media only screen and (min-width: 768px) {
@@ -552,11 +558,17 @@ body {
   }
   #fonctionnement {
     width: 50%;
+    text-align: center;
   }
   #restaurants {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: center;
+  }
+  .title-menu-france {
+    justify-content: space-evenly;
+    width: 25%;
   }
   .restaurant-title {
     width: 85%;
@@ -566,7 +578,7 @@ body {
     display: none;
   }
   .card-on-index {
-    width: 40% !important;
+    width: 20%;
   }
   .container-the-menus {
     flex-direction: row;
@@ -587,6 +599,9 @@ body {
   .contain-footer-links {
     flex-direction: row !important;
     align-items: center;
+  }
+  .contact-us {
+    width: 60%;
   }
 }
 
