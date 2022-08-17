@@ -542,7 +542,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1440px;
 }
 
 @media only screen and (min-width: 768px) {
