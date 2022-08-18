@@ -3,6 +3,17 @@
 }
 
 // spin = check menu animation
+
+@-webkit-keyframes spin{
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -26,29 +37,6 @@
   }
 }
 
-@keyframes fadein2 {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadein3 {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 // loader + dual-ring = loading page animation
 @keyframes loader2 {

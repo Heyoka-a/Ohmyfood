@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -8,26 +16,6 @@
   }
 }
 @keyframes fadein {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadein2 {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadein3 {
   0% {
     opacity: 0;
     transform: translateY(10px);
@@ -453,6 +441,8 @@ footer .footer-img {
   display: flex;
   place-items: center;
   animation: spin;
+  -webkit-animation: spin;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
@@ -503,12 +493,12 @@ footer .footer-img {
 
 .container-the-menus > div:nth-child(2) {
   transition: all 300ms;
-  animation: fadein2 2s ease-in-out;
+  animation: fadein 2s ease-in-out;
 }
 
 .container-the-menus > div:nth-child(3) {
   transition: all 400ms;
-  animation: fadein3 3s ease-in-out;
+  animation: fadein 3s ease-in-out;
   margin-bottom: 18px;
 }
 
