@@ -10,7 +10,7 @@
 @keyframes fadein {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
@@ -30,7 +30,7 @@
 @keyframes fadein3 {
   0% {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
@@ -74,7 +74,7 @@
   justify-content: center;
   gap: 24px;
   font-family: "Shrikhand";
-  animation: loader2 3s;
+  animation: loader2 2s;
   animation-fill-mode: both;
   animation-timing-function: step-end;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
@@ -503,12 +503,13 @@ footer .footer-img {
 
 .container-the-menus > div:nth-child(2) {
   transition: all 300ms;
-  animation: fadein2 3s ease-in-out;
+  animation: fadein2 2s ease-in-out;
 }
 
 .container-the-menus > div:nth-child(3) {
   transition: all 400ms;
-  animation: fadein3 5s ease-in-out;
+  animation: fadein3 3s ease-in-out;
+  margin-bottom: 18px;
 }
 
 .contact-title {
@@ -550,15 +551,21 @@ body {
   scroll-behavior: smooth;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .logo-spinner-page {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   #fonctionnement {
-    width: 50%;
+    width: 90%;
+    height: 230px;
     text-align: center;
+    margin: 34px auto 0 auto;
+  }
+  .contain-choices-btn {
+    flex-direction: row;
+    gap: 60px;
   }
   #restaurants {
     width: 100%;
@@ -584,9 +591,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .little-container:nth-child(3) {
-    margin-bottom: 18px;
-  }
   .little-container {
     width: 40%;
   }
@@ -602,6 +606,11 @@ body {
   }
   .contact-us {
     width: 60%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .contain-choices-btn {
+    gap: 20px;
   }
 }
 
