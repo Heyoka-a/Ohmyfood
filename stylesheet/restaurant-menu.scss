@@ -84,9 +84,6 @@
 }
 
 
-
-
-
 .menu-link-anim{
   border-radius: 10px;
   background-color: #FFFFFF;
@@ -113,8 +110,6 @@
     display: flex;
     place-items: center;
     animation: spin;
-    -webkit-animation: spin;
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
   }
 }
@@ -159,6 +154,7 @@
 .change-width {
   @include width90;
 }
+//----
 
 .change-width-2 {
   margin: 0 4px 8px 0;
