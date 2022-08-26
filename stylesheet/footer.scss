@@ -11,19 +11,22 @@ footer {
     }
 }
 
-.contain-footer-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 120px;
-  @include width90;
-  margin: auto;
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding-left: 18px;
 }
 
-.footer-link {
+li a{
+  list-style-type: none;
   text-decoration: none;
-  font-family: 'Roboto';
-  color: white;
+  color: whitesmoke;
+  font-family: $second-font;
+  font-size: 16px;
+
+    &:hover{
+      color: rgba(255, 255, 255, 0.748);
+    }
 }
 
 // change margin <i> on footer
@@ -31,6 +34,6 @@ footer {
   margin: 0 12px 0 0;
 }
 
-.fa-handshake-angle{
+.fa-handshake-angle {
   margin: 0 6px 0 0;
 }

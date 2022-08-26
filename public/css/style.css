@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -250,11 +242,11 @@ span {
   align-items: center;
   border-radius: 18px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition-property: opacity;
+  transition-property: box-shadow;
   transition: all 400ms;
 }
 .card-on-index:hover {
-  box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
+  box-shadow: rgb(147, 86, 220) 0px 1px 4px, rgb(255, 121, 218) 0px 0px 0px 3px;
 }
 
 .new-green {
@@ -298,7 +290,7 @@ span {
 }
 
 .hearth:hover::before {
-  color: #9356DC;
+  color: rgb(147, 86, 220);
   font-weight: bold;
 }
 
@@ -314,19 +306,21 @@ footer .footer-img {
   margin: 18px 14px;
 }
 
-.contain-footer-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 120px;
-  width: 90%;
-  margin: auto;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 18px;
 }
 
-.footer-link {
+li a {
+  list-style-type: none;
   text-decoration: none;
+  color: whitesmoke;
   font-family: "Roboto";
-  color: white;
+  font-size: 16px;
+}
+li a:hover {
+  color: rgba(255, 255, 255, 0.748);
 }
 
 .fa-utensils {
@@ -428,7 +422,7 @@ footer .footer-img {
 .menu-link-anim:hover .checkbox {
   width: 60px;
   height: 54px;
-  background-color: green;
+  background-color: #99E2D0;
   display: flex;
   justify-content: center;
   border-radius: 0 20% 20% 0;
@@ -441,8 +435,6 @@ footer .footer-img {
   display: flex;
   place-items: center;
   animation: spin;
-  -webkit-animation: spin;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
@@ -454,7 +446,7 @@ footer .footer-img {
   font-family: "Roboto";
 }
 .plats p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -584,6 +576,10 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .contain-menus {
+    width: 80%;
+    margin: -50px auto 0 auto;
+  }
   .little-container {
     width: 40%;
   }
@@ -593,8 +589,11 @@ body {
   .footer-img {
     width: 130px !important;
   }
-  .contain-footer-links {
-    flex-direction: row !important;
+  ul {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
   }
   .contact-us {
@@ -602,8 +601,38 @@ body {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .logo-spinner-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .contain-choices-btn {
     gap: 20px;
+  }
+  footer {
+    align-items: center;
+  }
+  ul {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card-on-index {
+    width: 45%;
+  }
+  .before-page {
+    font-size: 22px;
+    top: 2%;
+  }
+  .title-menu-france {
+    justify-content: space-evenly;
+    width: 40%;
   }
 }
 

@@ -54,7 +54,7 @@
   gap: 14px;
 
   &  .title-of-menu {
-      font-family: 'Shrikhand';
+      font-family: $first-font;
       border-bottom: 2px solid $tertiary;
       width: 10%;
     }
@@ -96,7 +96,7 @@
 .menu-link-anim:hover .checkbox {
   width: 60px;
   height: 54px;
-  background-color: green;
+  background-color: #99E2D0;
   display: flex;
   justify-content: center;
   border-radius: 0 20% 20% 0;
@@ -119,11 +119,11 @@
   padding: 8px;
 
     & strong{
-      font-family: 'Roboto';
+      font-family: $second-font;
     }
 
     & p {
-      font-family: "Roboto", sans-serif;
+      font-family: $second-font;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -135,7 +135,7 @@
     display: flex;
     align-items: flex-end;
     margin: 8px 4px;
-    font-family: 'Roboto';
+    font-family: $second-font;
   }
 
 .checkbox{

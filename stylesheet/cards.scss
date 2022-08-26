@@ -15,6 +15,7 @@
   font-family: $first-font;
 }
 
+
 .card-on-index {
   position: relative;
   text-decoration: none;
@@ -26,11 +27,11 @@
   align-items: center;
   border-radius: 18px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition-property: opacity;
+  transition-property: box-shadow;
   transition: all 400ms;
 
     &:hover{
-      box-shadow: rgba(116, 116, 116, 0.16) 0px 1px 4px, rgb(120, 119, 119) 0px 0px 0px 3px;
+      box-shadow: rgba(147, 86, 220, 1) 0px 1px 4px,rgba(255, 121, 218, 1) 0px 0px 0px 3px;
     }
 }
 
@@ -78,6 +79,6 @@
 }
 
 .hearth:hover::before {
-  color: #9356DC;
+  color:rgb(147, 86, 220);
   font-weight: bold;
 }
