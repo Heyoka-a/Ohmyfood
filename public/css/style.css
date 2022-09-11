@@ -456,7 +456,7 @@ li a:hover {
 .align-price {
   display: flex;
   align-items: flex-end;
-  margin: 8px 4px;
+  margin: 8px 18px 8px 0;
   font-family: "Roboto";
 }
 
